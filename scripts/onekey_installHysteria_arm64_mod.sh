@@ -35,7 +35,9 @@ openssl req -newkey rsa:2048 -nodes -keyout hysteria.server.key -subj "/C=CN/ST=
 # 签发服务端用的证书
 openssl x509 -req -extfile <(printf "subjectAltName=DNS:${domain}.com,DNS:www.${domain}.com") -days 3650 -in hysteria.server.csr -CA hysteria.ca.crt -CAkey hysteria.ca.key -CAcreateserial -out hysteria.server.crt
 
-echo "block all udp/443" > /${path}/yugogoServer.acl
+cat > ./yugogoServer.acl <<EOF
+block all udp/443
+EOF
 
 cat > ./client.json <<EOF
 {
