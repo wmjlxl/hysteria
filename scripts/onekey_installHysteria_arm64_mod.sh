@@ -77,7 +77,7 @@ cat > ./server.json <<EOF
     "listen": ":${port}",
     "protocol": "faketcp",
     "disable_udp": false,
-    "cert": /root/.ssh/hysteria/hysteria.server.crt",
+    "cert": "/root/.ssh/hysteria/hysteria.server.crt",
     "key": "/root/.ssh/hysteria/hysteria.server.key" ,
     "auth": {
         "mode": "password",
