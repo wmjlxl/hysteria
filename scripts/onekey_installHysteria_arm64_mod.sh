@@ -45,8 +45,8 @@ cat > ./client.json <<EOF
     "protocol": "faketcp",
     "alpn": "h3",
     "auth_str": "${password}",
-    "up_mbps": 30,
-    "down_mbps": 300,
+    "up_mbps": 62,
+    "down_mbps": 1250,
     "socks5": {
         "listen": "0.0.0.0:10811",
         "timeout" : 300,
